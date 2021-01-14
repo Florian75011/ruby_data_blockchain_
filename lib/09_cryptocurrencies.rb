@@ -12,19 +12,17 @@ price = ["6558.07", "468.95", "0.487526", "762.84", "8.86", "85.26", "0.151268",
 # my_hash = {Bitcoin: 6558.07, Ethereum: 468.95, XRP: 0.487526, etc.}
 
 
-
-#puts les2= Hash[change.zip(price)]
-#puts les2.length
-puts  les2.max_by{|k,v| v.to_f}
-# puts  les2.min_by{|k,v| v.to_f}
+#ATTENTION : Lire l'ex 1 avec puts et la suite sans celui de la ligne 17. Le dernier exercice (n°5) fait appel aux lignes 21 & 22.
+#puts
+les2= Hash[change.zip(price)]
+#puts les2.max_by{|k,v| v.to_f}
+#puts  les2.min_by{|k,v| v.to_f}
 #puts les2.select {|key, value| value.to_f < 6000}
-# lav=les2.select {|key, value| value.to_f < 6000}
-#puts lav.max_by{|k,v| v.to_f}
-
+lav=les2.select {|key, value| value.to_f < 6000}
+puts lav.max_by{|k,v| v.to_f}
 
 
 # Hint : Il est entièrement possible de le faire "à la main" via une boucle, mais je t'invite à chercher s’il n'existe pas une méthode Ruby spécialement pour ça 😉.
-
 # Une fois cette association réalisée, code un programme Ruby pour donner :
 
 #     La ou les crypto qui ont la plus grosse valeur.
